@@ -5,9 +5,11 @@
     android:layout_height="match_parent"
     tools:context=".view.fragment.SettingFragment">
 
-    <TextView
+    <ToggleButton
+        android:id="@+id/toggleButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="SETTING" />
+        android:textOff="Celsius"
+        android:textOn="Fahrenheit" />
 </RelativeLayout>
