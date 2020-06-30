@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
         val adapter = SectionsPagerAdapter(supportFragmentManager)
         adapter.addFragment(CurrentFragment(), "Current")
         adapter.addFragment(DateFragment(), "Date")
-        adapter.addFragment(DaysFragment(), "30 Days")
+        adapter.addFragment(DaysFragment(), "5 Day / 3 Hour")
         adapter.addFragment(SettingFragment(), "Setting")
         viewPager.adapter = adapter
     }

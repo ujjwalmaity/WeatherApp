@@ -11,6 +11,7 @@ import androidx.lifecycle.Observer
 import dev.ujjwal.weatherapp.R
 import dev.ujjwal.weatherapp.model.current.Current
 import dev.ujjwal.weatherapp.model.unit
+import dev.ujjwal.weatherapp.model.unitSymbol
 import dev.ujjwal.weatherapp.service.WeatherService
 import dev.ujjwal.weatherapp.service.WeatherServiceBuilder
 import dev.ujjwal.weatherapp.util.PREF_USER_NAME
@@ -78,7 +79,7 @@ class CurrentFragment : Fragment() {
                 if (response.isSuccessful) {
                     Log.i(TAG, "TEMP: ${response.body()?.main?.temp}")
                     textView.text =
-                        "UserName: ${context?.getUserDetails(PREF_USER_NAME)}\n\nWeather: ${response.body()?.weather?.get(0)?.description}\nTEMP: ${response.body()?.main?.temp}\nPlace: ${response.body()?.name}"
+                        "UserName: ${context?.getUserDetails(PREF_USER_NAME)}\n\nWeather: ${response.body()?.weather?.get(0)?.description}\nTEMP: ${response.body()?.main?.temp} $unitSymbol\nPlace: ${response.body()?.name}"
                 }
             }
         })

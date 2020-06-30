@@ -8,3 +8,4 @@ class Location(lat: Double, long: Double) {
 //For temperature in Fahrenheit use units = imperial
 //For temperature in Celsius use units = metric
 var unit = "metric"
+var unitSymbol = "C"

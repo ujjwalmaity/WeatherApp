@@ -6,8 +6,25 @@
     tools:context=".view.fragment.DaysFragment">
 
     <TextView
+        android:id="@+id/days_tv_usr_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="30 DAYS" />
+        android:layout_margin="5dp"
+        android:fontFamily="serif"
+        android:text="30 DAYS"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/days_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="REFRESH" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/days_tv_usr_name"
+        tools:listitem="@layout/item_layout_day" />
 </RelativeLayout>
